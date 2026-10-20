@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo-nome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-nome img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.logo-nome h1 {
+    color: #e50914;
+    font-size: 28px;
+}
+
+.logo-nome h1 span {
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+}
+
+header {
+    background-color: #080808;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: #e50914;
+    font-size: 28px;
+}
+
+header h1 span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+.destaque {
+    min-height: 320px;
+    padding: 60px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #111, #252525);
+}
+
+.destaque h2 {
+    font-size: 34px;
+    max-width: 550px;
+    margin-bottom: 15px;
+}
+
+.destaque p {
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    background-color: #b80710;
+}
+
+.conteudo {
+    padding: 35px 7%;
+}
+
+.conteudo h2 {
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+input {
+    flex: 1;
+    min-width: 150px;
+}
+
+select {
+    max-width: 220px;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+}
+
+.filme {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.filme img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    background-color: #333;
+}
+
+.filme h3 {
+    font-size: 17px;
+    margin: 12px 12px 6px;
+}
+
+.filme p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0 12px 12px;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 12px;
+}
+
+.acoes button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.acoes button:hover {
+    background-color: #b80710;
+}
+
+#mensagem {
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-conteudo h2 {
+    margin: 15px 0;
+}
+
+.modal-conteudo p {
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.fechar {
+    float: right;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .destaque h2 {
+        font-size: 27px;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    select {
+        max-width: none;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .filme img {
+        height: 210px;
+    }
+}

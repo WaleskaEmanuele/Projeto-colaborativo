@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFilmes</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+</head>
+<body>
+    <header>
+
+        <div class="logo-nome">
+    <img src="../IMG/logo.png" alt="Logo CineFilmes">
+    <h1>Cine<span>Filmes</span></h1>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Filmes</a>
+            <a href="#favoritos">Favoritos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque" id="inicio">
+            <div>
+                <h2>Seu próximo filme favorito está aqui!</h2>
+                <p>Explore filmes, descubra histórias e escolha o que assistir.</p>
+                <a href="#catalogo" class="botao">Ver catálogo</a>
+            </div>
+        </section>
+
+        <section class="conteudo" id="catalogo">
+            <h2>Catálogo de filmes</h2>
+
+            <div class="filtros">
+                <input type="text" id="busca" placeholder="Pesquisar filme...">
+
+                <select id="genero">
+                    <option value="Todos">Todos os gêneros</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Animação">Animação</option>
+                    <option value="Romance/Drama">Drama</option>
+                </select>
+            </div>
+
+            <div id="filmes" class="grade"></div>
+            <p id="mensagem"></p>
+        </section>
+
+        <section class="conteudo" id="favoritos">
+            <h2>Meus favoritos</h2>
+            <div id="lista-favoritos" class="grade"></div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <button id="fechar" class="fechar" aria-label="Fechar">X</button>
+            <h2 id="titulo-modal"></h2>
+            <p id="sinopse-modal"></p>
+            <div class="video">
+                <iframe id="trailer" title="Trailer do filme"
+                    src=""
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+     
+    <script src="../JS/script.js" defer></script>
+</body>
+</html>
